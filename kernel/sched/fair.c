@@ -116,9 +116,10 @@ int __weak arch_asym_cpu_priority(int cpu)
  * The margin used when comparing utilization with CPU capacity.
  *
  * (default: ~20%)
+ * (now: ~32%)
+ *
  */
-#define fits_capacity(cap, max)	((cap) * 1280 < (max) * 1024)
-
+#define fits_capacity(cap, max) ((cap)*1500 < (max)*1024)
 #endif
 
 #ifdef CONFIG_CFS_BANDWIDTH
